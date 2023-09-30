@@ -1,0 +1,96 @@
+.carta-container{
+    perspective:1100; /*Esta propriedade especifica quantos pixels serão usados para renderização do giro 3D*/
+    -webkit-perspective: 1100; /* Chrome, Safari, Opera */
+    display: block;
+    margin-left:2px;
+    }
+.carta, .carta-container, .frente, .verso{
+    min-width: 170px;
+    min-height: 170px;
+    width: 98%;
+    height: 100%;
+}
+.carta{
+    position:relative;
+    
+    color:#CF0;
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    border-radius: 10px;
+    text-align:center;
+    line-height:25px;
+    margin:10px;
+    transition:all 0.9s ease;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Chrome, Safari, Opera */
+    
+    }
+/*
+.carta:hover{
+    cursor: pointer;
+    transform:rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */ /*Esta propriedade serve para preservar a posição 3D do elemento descendente*/
+
+\*\*    
+    
+.verso{
+    transform:rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+}
+.verso img{
+
+    border-radius: 10px;
+
+    position: cover;
+}
+.frente, .verso{
+    position:absolute;
+    top:0;
+    left:0;
+
+    
+    border-radius: 10px;
+    opacity: 0.9;
+    backface-visibility:hidden; /*Essa propriedade faz com que a parte oposta da carta não seja mostrada, caso contrário veria as duas faces, uma justaposta a outra*/
+    -webkit-backface-visibility:hidden; /* Chrome, Safari, Opera */
+    }
+    .frente{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .frente h1, .frente h2, .frente h3{
+    padding: 13px 0px 0px;
+    }
+    .frente h1{
+        font-size: 100%;        
+    }
+    .frente h2{
+        font-size: 115%;
+        
+    }
+    .frente h3{
+        letter-spacing: 1px;
+        font-size: 80%;
+        margin: 0px 5px 5px;
+        
+    }
+    #arquivo{
+        display: none;
+    }
+    article{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        height: 95%;
+        justify-content: space-between;
+        border: 1px solid;
+        border-radius: 10px;
+        
+    }
+@media screen and (max-width: 599px) {
+    .carta-container{
+        flex-direction: column;
+    }
+}

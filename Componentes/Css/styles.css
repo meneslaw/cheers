@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/Carrosel/01.jpg");
+    background-position: bottom;
+    clip-path: circle(45% at bottom right);
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #571111;
+}
+header .logo{
+    position: relative;
+    max-width: 100px;
+}
+header .navegar ul{
+    position: relative;
+    display: flex;
+}
+header .navegar li{
+    list-style: none;
+}
+header .navegar li a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header .navegar li button{
+    padding: 2px 30px;
+    display: inline-block;
+    font-size: 19px;
+    margin-left: 100px;
+    border: green;
+    border-radius: 15px;
+    background-color: rgb(1, 46, 12);
+    color: aliceblue;
+}
+header .navegar li button:hover{
+    background-color: green;
+    transition: 0.5s ease-in-out;
+}
+header .navegar li a:hover{
+    color: green;
+}
+.contents{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 88px 0px 20px;
+}
+.contents .text{
+    position: absolute;
+    width: 60%;
+    margin-right: 20px;
+    background-color: #1b1b1b;
+    border-radius: 30px;
+    padding: 10px;
+}
+.contents .text h2,h1{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 1px;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+.contents .text h2 span{
+    font-size: 1em;
+    color: rgb(5, 104, 30);
+}
+.contents .text p{
+    color: #fff;
+    padding: 5px 1px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15.5px;
+}
+.contents .text a{
+    display: inline-block;
+    margin-top: 35px;
+    padding: 10px 25px;
+    background: rgb(1, 46, 12);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+.contents .text a:hover{
+    
+    background-color: green;
+}

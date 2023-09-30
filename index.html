@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css"/>
+    <title>Cheers PUB Londrina</title>
+
+</head>
+<body>
+    <div class="bg-home">
+        <header>
+            <nav class="header-content container">
+                <div class="header-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram fa-3x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook fa-3x"></i>
+                    </a>
+                    <div class="header-content-contact">
+                    <a href="#">
+                        <i><span class="zap"><img src="assets/whatssapp.svg" alt=""></span></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <img class="header-logo-cheers" src="Componentes/images/logocip_inside.png" alt="Logo bla"/>
+                </div>
+                <div id="list">
+                    <a href="index.html" class="header-button">Início</a>
+                    <a href="?nav=sobre" class="header-button">Sobre o Bar</a>
+                    <a href="?nav=drinks" class="header-button">Drinks</a>
+                    <span class="h-b-zap"><a href="#"><i><img src="assets/whatssapp.svg" alt=""></i></a></span>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <section>
+        <div class="options">
+            <div class="options-text">
+  
+            </div>
+            <div id="chama"></div>
+            <script>
+                function queryObj() {
+                    var result = {}, keyValuePairs = location.search.slice(1).split("&");
+                    keyValuePairs.forEach(function(keyValuePair) {
+                        keyValuePair = keyValuePair.split('=');
+                        result[decodeURIComponent(keyValuePair[0])] = decodeURIComponent(keyValuePair[1]) || '';
+                    });
+                    return result;
+                }
+                var myParam = queryObj();
+                        var navParam = myParam['nav'];
+                        if(myParam['nav'] ==undefined){
+                            var navParam = "Página Inicial";
+                            
+                        }else{
+                            var navParam = navParam;
+                            
+                        }
+                        
+                        const div = document.getElementById("chama");
+                        
+                        fetch(div.innerHTML = myParam['nav'] + ".html")
+                            .then(response => response.text()) 
+                            .then(textString => 
+                            {
+                                div.innerHTML = textString;
+                                if(myParam['nav'] == "drinks"){
+                                    sheet('drinks');
+                                }
+                            });
+                            
+            </script>
+        </div>
+        
+    </section>
+    <footer>
+        <div class="footer-circle"></div>
+    </footer>
+<script type="text/javascript" src="Componentes/js/javascript.js"></script>
+<noscript>
+    <META http-equiv="refresh" content="1;URL=site-v2/index.html"> 
+</noscript>
+</body>
+</html>

@@ -1,0 +1,134 @@
+header{
+    width: 100%;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+i{
+    color: $white-normal;
+}
+.header-content-contact{
+    display: none;
+}
+#list {
+    display: flex;
+    width: 100%;
+    margin-top: -10px;
+    height: 100%;
+    
+    align-items: center;
+    justify-content: space-between;
+
+}
+#list a{
+    
+    justify-items: right;
+    
+}
+.header-button-zap{
+    float: right;
+}
+.header-icons{
+    display: flex;
+    gap: 14px;
+}
+.h-b-zap a:hover, .header-content-contact:hover{
+    animation: translateY 0.8s infinite alternate;
+}
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $green-light;
+    }
+}
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+.header-button{
+    border: 1px solid $red-dark;
+    border-color: transparent;
+    padding: 5px 14px;
+    border-radius: 10px;
+    font-size: 21px;
+    transition: background-color 1s;
+    font-family: 'Bungee Spice', cursive;
+    
+}
+.header-button:hover{
+    border: 1px solid $red-dark;
+    background-color: $dark-red;
+    color: $green-dark;
+    
+}
+.header-logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    min-height: 140px;
+}
+.header-logo-cheers{
+    width: 160px;
+    display: flex;
+    
+}
+.h-b-zap{
+    display: flex;
+    padding: 0;
+    
+    justify-content: right;
+}
+.h-b-zap img{
+    
+    width: 44px;
+}
+@media screen and (max-width: 878px) {
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 44px;
+        }
+    }
+    .header-logo{
+        
+        position: absolute;
+        opacity: 0.5;
+        margin-top: 65px;
+        
+    }
+ 
+
+    .header-button{
+        padding: 8px 24px;
+        display: flex;
+        border: 1px solid $green-light;
+        border-radius: 10px;
+        color: $white-light;
+        background-color: transparent;
+        transition: background-color 0.8s;
+        font-weight: 300;
+    }
+    .header-content-contact{
+        display: block;
+        width: 44px;
+        margin-top: 16px;
+    }
+    .header-content-contact img{
+        width: 44px;
+    }
+    .header-button-zap{
+        display: flex;
+    }
+}

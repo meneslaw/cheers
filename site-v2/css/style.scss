@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .1rem;
+    font-size: 90%;
+    font-weight: 500;
+    padding: 10px 45px;
+    background: rgb(180,59,58);
+    background: -moz-linear-gradient(180deg, rgba(180,59,58,0.7833508403361344) 0%, rgba(253,83,29,1) 50%, rgba(252,107,69,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(180,59,58,0.7833508403361344) 0%, rgba(253,83,29,1) 50%, rgba(252,107,69,1) 100%);
+    background: linear-gradient(180deg, rgba(180,59,58,0.7833508403361344) 0%, rgba(253,83,29,1) 50%, rgba(252,107,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b43b3a",endColorstr="#fc6b45",GradientType=1);
+    
+}
+.header-container-items{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    padding: 5px;
+    background-image: url("/Componentes/images/bg_1440_.png");
+    background-position: center;
+}
+.header-container-items-logo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+}
+.header-container-items-logo img{
+    width: 100px;
+}
+.header-container-items-logo h1{
+    font-size: 12px;
+}
+nav{
+    display:none;
+    width: 50%;
+    justify-content: space-around;
+}
+.nav-items{
+    display: contents;
+    width: 100%;
+}
+.nav-items button{
+    background: none;
+    font-weight: 600;
+    color: #f7ede4;
+    border: 0;
+    text-transform: uppercase;
+}
+section{
+    margin-top: 10px;
+    width: 100%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.content{
+    display: flex;
+    width: 100%;
+    height: 99%;
+    align-items: center;
+    
+}
+.content-items{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+.content-items h2, .content-items h3{
+    color: #09a803;
+    font-size: 14px;
+    border-left: 10px solid #055e02; 
+    padding-left: 10px;
+}
+
+.sobre, .loc{
+    width: 98%;
+    border: 1px solid rgba(0, 48, 4, 0.527);
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.loc{
+    height: 30%;
+}
+.sobre{
+    height: 50%;
+}
+@media screen and (max-width: 799px){
+    .content-items{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .loc, .sobre{
+        height: auto;
+    }
+    p{
+        margin-top: 10px;
+        
+    }
+    .container{
+        height: 100%;
+    }
+    .header-container-items-logo{
+        width: 100%;
+        justify-content: center;
+    }
+}

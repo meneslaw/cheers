@@ -13,14 +13,12 @@
             <div class="header-container">
                 <div class="header-container-items">
                     <div class="header-container-items-logo">
-                        <img src="../Componentes/images/logocip_inside.png" alt="Cheers Pub Londrina"/>
-                        <div class="titleH1" hidden="hidden"><h1>Cheers Pub Londrina</h1></div>
+                        <a href="index.html"><img src="../Componentes/images/logocip_inside.png" title="Cheers Pub Londrina" alt="Cheers Pub Londrina"></a>
+                        
                     </div>
                     <nav>
                         <div class="nav-items">
-                            <button>Opção 01</button>
-                            <button>Opção 01</button>
-                            <button>Opção 01</button>
+                            <h1>Cheers Pub Londrina</h1>
                         </div>
                     </nav>
                 </div>
@@ -32,14 +30,37 @@
                     <div class="loc"><h2>localização</h2>
                         <p>R. Alagoas, 1005, Centro - Londrina PR.</p>
 
-                        <p>Ver no Google Maps</p>
+                        <p> <a href="https://maps.app.goo.gl/FLBWyJCyG4cT3YA18" target="_blank">Ver no Google Maps</a></p>
                         
-                        <p>Faça já sua Reserva!</p>
+                        <p><label for="formZAP"><a href="#formulario">Faça já sua Reserva!</a></label></p>
                         
                         <p>Aberto de Terça a Domingo.</p>
+                        
+                    </div>
+                    <div id="formulario" class="loc"><h3>Contato</h3>
+                        <div class="contact">
+                            <form method="get" action="https://wa.me/5542996262182" target="_blank">
+                                <div class="contact-form">
+                                    <div class="contact-label">
+                                        Mensagem: 
+                                    </div>
+                                    <div class="contact-input">
+                                        <textarea autofocus id="formZAP" value="" type="text" name="text" placeholder="Digite sua Menssagem." required></textarea>
+                                    </div>
+                                </div>
+                                <div class="contact-form">
+                                    <div class="contact-label">
+                                        <button>Enviar</button>
+                                    </div>
+                                    <div class="contact-input">
+                                        <p>Você vai ser direcionado ao WhatsApp</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
-                    <div class="sobre"><h3>Sobre</h3>
+                    <div class="sobre"><h4>Sobre</h4>
                         <p>Primeiro pub irlândes em Londrina, inalgurado em 2009, um lugar aconchegante para estar entre amigos, compartilhar momentos agradáveis.</p>
         
                         <p>Somos a cara de LONDRINA.</p>
@@ -52,12 +73,15 @@
                 
                         <p>Os disputados sofás vermelhos, a decoração das paredes e a escultura do duende em papel machê compõem um cenário pitoresco que, de tempos em tempos, estampa de catálogos publicitários a albuns de casamento.</p>
                    
-                        <a href="index.html?nav=contato" class="options-bt">Entre em Contato!</a>
+                        <a href="#formulario" class="options-bt">Entre em Contato!</a>
                     </div>
-
+                    
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        window.location= '/index.html';
+    </script>
 </body>
 </html>

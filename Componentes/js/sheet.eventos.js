@@ -100,15 +100,8 @@ function insertData(objDados, plan, dia) {
   if (plan == "Data") {
     for (var b = 0; b < dadosHtml.length; b++) {
       htmlData = objDados[b];
-      htmlObjData = {
-        Dia: htmlData.data,
-        Banda: htmlData.banda,
-        Descricao: htmlData.descricao,
-        Foto: htmlData.imagem,
-      };
-
-      arrayHtml.push(htmlObjData);
-
+      
+    
       if (dia == "Terça Feira") {
         var ulsDados = "ter";
       }
@@ -129,6 +122,8 @@ function insertData(objDados, plan, dia) {
       }
       const uDados = ulsDados;
       document.getElementById(uDados).innerHTML = "";
+      var divChange = document.getElementById(uDados);
+      divChange.setAttribute("onclick", "openDialog('"+htmlData["imagem"]+"')");
       var imgChange = document.getElementById(ulsDados + ulsDados);
       //console.log(imgChange);
       imgChange.setAttribute("src", htmlData["imagem"]);
@@ -137,12 +132,46 @@ function insertData(objDados, plan, dia) {
         "<h2>" + htmlData["banda"] + "<h2/>";
       document.getElementById(ulsDados).innerHTML +=
         "<p><a href='#xis'>" + htmlData["descricao"] + "</a></p>";
+        if (htmlData.data == dia) {
+            break;
+        }if(htmlData != dia){
+            document.getElementById(uDados).innerHTML = "<h2>Evento não cadastrado</h2>";
+            imgChange.setAttribute("src", "./Componentes/images/logocip_inside.png");
+            
+        }
 
       //uls.innerHTML = "<li>"+htmlData['data']+"</li>";
-      if (htmlData.data == dia) {
-        //console.log(htmlData);
-        break;
-      }
+
     }
   }
+}
+function openModal(agr){
+    const divByModal = document.getElementById('showModal');
+    if(agr =="limpar"){
+        divByModal.style.display = "none";
+        divByModal.style.opacity = "0";
+        document.getElementById('showModal').innerHTML = '<img src="Componentes/images/logocip_inside.png" alt="Logo">';
+        
+    }else{
+    const imgModal = document.querySelector('#showModal').children[0];
+    imgModal.setAttribute("src", agr);
+    
+    document.getElementById('showModal').innerHTML += "<h3>"+"<button onclick=openModal('limpar')>Banda Sei Lá Eu!!!</button><h3>";
+    divByModal.style.display = "flex";
+    divByModal.style.opacity = "1";
+    //console.log(divByModal);
+    }
+}
+function openDialog(agr){
+    const dialogModal = document.querySelector("dialog");
+    const divDialog = document.getElementById('showModalDialog');
+    const imgModal = document.querySelector('#showModalDialog').children[0];
+    if(agr =="clear") { 
+        dialogModal.close(); 
+        divDialog.innerHTML = '<img src="Componentes/images/logocip_inside.png" alt="Logo">';
+    }else{
+        imgModal.setAttribute("src", agr);
+        divDialog.innerHTML += "<h3>"+"<button onclick=openDialog('clear')>Banda Sei Lá Eu!!!</button><h3>";
+        dialogModal.showModal();
+    }
 }

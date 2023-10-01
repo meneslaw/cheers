@@ -207,13 +207,15 @@ section .options {
   box-shadow: rgba(54, 2, 2, 0.4) 0px 2px 4px, rgba(48, 1, 1, 0.3) 0px 7px 13px -3px, rgba(238, 174, 174, 0.2) 0px -3px 0px inset;
 }
 
-#chama .menu:hover, .loc:hover {
+#chama .menu:hover,
+.loc:hover {
   cursor: pointer;
   box-shadow: rgba(248, 135, 135, 0.4) 0px 2px 4px, rgba(180, 180, 180, 0.3) 0px 7px 13px -3px, rgba(73, 5, 5, 0.2) 0px -3px 0px inset;
   background-color: rgba(54, 2, 2, 0.4);
 }
 
-.page p, .page a {
+.page p,
+.page a {
   font-size: 11px;
   font-weight: 500;
   color: #fff;
@@ -231,7 +233,8 @@ section .options {
   background-color: #290202;
 }
 
-.options-text, #chama h1 {
+.options-text,
+#chama h1 {
   color: #9ffaa3;
   font-size: 35px;
   margin-bottom: 10px;
@@ -244,7 +247,10 @@ section .options {
   line-height: 25px;
 }
 
-#uls p, #uls h2, .uls p, .uls h2 {
+#uls p,
+#uls h2,
+.uls p,
+.uls h2 {
   color: #edeaef;
   font-size: 13px;
   font-weight: 300;
@@ -252,7 +258,8 @@ section .options {
   line-height: normal;
 }
 
-#uls p, .uls p {
+#uls p,
+.uls p {
   font-size: 12px;
   padding: 2px 0px 2px 11px;
   border-left: 10px solid transparent;
@@ -260,12 +267,14 @@ section .options {
   letter-spacing: 0.1rem;
 }
 
-#uls p:hover, .uls p:hover {
+#uls p:hover,
+.uls p:hover {
   border-left: 10px solid rgb(92, 226, 92);
   background-color: #0c2135;
 }
 
-#uls h2, .uls h2 {
+#uls h2,
+.uls h2 {
   font-weight: 600;
   color: #9ffaa3;
   text-transform: uppercase;
@@ -330,13 +339,15 @@ section .options {
   color: #9ffaa3;
 }
 
-#uls a, .uls a {
+#uls a,
+.uls a {
   color: #edeaef;
   letter-spacing: 0.1rem;
   font-size: 100%;
 }
 
-#uls a:hover, .uls a:hover {
+#uls a:hover,
+.uls a:hover {
   color: #eff4fa;
 }
 
@@ -345,7 +356,8 @@ section .options {
   background-position-y: 300px;
 }
 
-#uls, .uls {
+#uls,
+.uls {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -383,7 +395,12 @@ section .options {
   background: none;
 }
 
-.ter, .qua, .qui, .sex, .sab, .dom {
+.ter,
+.qua,
+.qui,
+.sex,
+.sab,
+.dom {
   display: none;
 }
 
@@ -393,7 +410,12 @@ section .options {
   font-weight: 600;
 }
 
-.uls-image-ter, .uls-image-qua, .uls-image-qui, .uls-image-sex, .uls-image-sab, .uls-image-dom {
+.uls-image-ter,
+.uls-image-qua,
+.uls-image-qui,
+.uls-image-sex,
+.uls-image-sab,
+.uls-image-dom {
   border: 1px solid rgb(209, 178, 1);
   border-radius: 5px;
   width: 100%;
@@ -439,13 +461,92 @@ section .options {
 
 .divsForms {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .divsForms input {
   margin: 3px;
   min-width: 210px;
+  width: 97%;
+}
+
+.dialogClick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+#showModalDialog img {
+  max-width: 350px;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+}
+
+dialog {
+  margin: 15% 0px 0px 10%;
+}
+
+dialog::-webkit-backdrop {
+  background: rgba(54, 2, 2, 0.63);
+}
+
+dialog::backdrop {
+  background: rgba(54, 2, 2, 0.63);
+}
+
+#showModal {
+  border-radius: 10px;
+  position: absolute;
   width: 100%;
+  border: 3px solid #290202;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: linear-gradient(90deg, rgb(52, 52, 52) 0%, rgb(97, 119, 255) 0%, rgb(33, 57, 189) 100%);
+  transition: all 0.8s;
+}
+
+#showModal:target {
+  display: none;
+  opacity: 0;
+}
+
+.labels button,
+.dialogClick button {
+  width: 90px;
+  border: 2px solid #0c2135;
+  border-radius: 7px;
+  padding: 5px;
+  background: #09a803;
+  color: #290202;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  transition: 1s;
+  margin-left: 13px;
+}
+
+.dialogClick button {
+  width: 100%;
+  margin: 0;
+  margin-top: 5px;
+  color: rgba(254, 251, 255, 0.9529411765);
+}
+
+.labels button:hover {
+  background: #055e02;
+  opacity: 0.8;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 490px) {
@@ -454,11 +555,13 @@ section .options {
   }
 }
 @media screen and (max-width: 599px) {
-  .options-text, #chama h1 {
+  .options-text,
+#chama h1 {
     color: #9ffaa3;
     font-size: 140%;
   }
-  .page, #chama h1 {
+  .page,
+#chama h1 {
     text-align: center;
   }
   .loc {
